@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card';
+import { useSelector, useDispatch } from 'react-redux';
+import { failuresData, loadingData, successData } from '../Redux/actions/fetchDataActions';
 import axios from 'axios';
-
 
 const Home = () => {
 
-  const [data, setData] = useState(null)
+  const dispatch = useDispatch()
+  const {data, loading, error} = useSelector(state => state.fetchReducer)
 
   useEffect(() => {
-
     const fetchData = async () => {
-      let res = await axios.get('https://dummyjson.com/products')
-      setData(res.data)
+      try {
+        dispatch(loadingData())
+        const res = await axios.get('https://dummyjson.com/products')
+        const data = await res.data;
+        dispatch(successData(data))
+      } catch (error) {
+        dispatch(failuresData(error.message))
+      }
     }
-    fetchData();
-
-  }, [])
+    fetchData()
+  }, [dispatch])
 
   return (
     <>

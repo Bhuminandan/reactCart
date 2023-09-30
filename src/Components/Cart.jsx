@@ -5,7 +5,7 @@ import { clearCart } from '../Redux/actions/cartActions.js'
 
 const Cart = () => {
 
-  let cartArr = useSelector(state => state)
+  let cartArr = useSelector(state => state.cartReducer)
   const dispatch = useDispatch();
   
   const subTotal = cartArr.reduce((acc, curr) => {
