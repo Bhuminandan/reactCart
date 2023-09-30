@@ -3,7 +3,7 @@ import { SUCCESS_DATA, LOADING_DATA, FAILURE_DATA } from '../actions/actionTypes
 const initialState = {
     loading: false,
     error: '',
-    data: []
+    data: null
 };
 
 export const fetchReducer = (state = initialState, action) => {

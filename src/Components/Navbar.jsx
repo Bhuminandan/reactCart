@@ -8,8 +8,8 @@ const Navbar = () => {
       <NavLink  className="logo text-white font-bold text-xl" to={'/'}>Shopping cart</NavLink>
       </div>
       <div className="right flex items-center justify-center gap-4">
-        <NavLink className=' text-white font-medium text-xl' to={'/'}>Home Page</NavLink>
-        <NavLink className=' text-white font-medium text-xl' to={'/cart'}>Cart Page</NavLink>
+        <NavLink className=' text-white font-medium text-sm md:text-xl' to={'/'}>Home Page</NavLink>
+        <NavLink className=' text-white font-medium text-sm md:text-xl' to={'/cart'}>Cart Page</NavLink>
       </div>
       
     </div>
