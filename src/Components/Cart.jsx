@@ -17,7 +17,7 @@ const Cart = () => {
   }
 
   return (
-    <div className='mb-10 '>
+    <div className='pb-32'>
     <h1 className='md:text-4xl sm:text-2xl text-xl text-center mt-10 font-bold'>My Cart</h1>
     <div className='w-full flex items-center md:items-start md:justify-between justify-center flex-wrap gap-2  md:px-20 sm:px-10  mt-10'>  
     <div className="left md:w-3/5">
