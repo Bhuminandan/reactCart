@@ -17,10 +17,10 @@ const Cart = () => {
   }
 
   return (
-    <>
+    <div className='mb-10 '>
     <h1 className='md:text-4xl sm:text-2xl text-xl text-center mt-10 font-bold'>My Cart</h1>
     <div className='w-full flex items-center md:items-start md:justify-between justify-center flex-wrap gap-2  md:px-20 sm:px-10  mt-10'>  
-    <div className="left w-3/5">
+    <div className="left md:w-3/5">
       <div className='flex items-center justify-center md:items-start md:justify-start gap-10 flex-wrap'>
       {
         cartArr.map((productObj) => {
@@ -34,7 +34,7 @@ const Cart = () => {
       }
     </div>
     </div>
-    <div className="right bg-zinc-950 w-96 h-auto p-10 text-white text-center">
+    <div className="right bg-zinc-950 w-96 h-auto p-10 text-white text-center mx-2">
       <p className=' pb-10 text-xl'>Checkout List</p>
       <ul className='flex flex-col gap-5 items-center justify-center w-full'>
           {
@@ -56,7 +56,7 @@ const Cart = () => {
       className='w-full py-2 text-center bg-white text-black font-medium active:scale-95 duration-300 transition-all'>Click to Checkout</button>
     </div>
     </div>
-    </>
+    </div>
     
   )
 }
